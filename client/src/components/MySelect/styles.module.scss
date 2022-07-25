@@ -1,0 +1,10 @@
+ @import '../../assets/styles/color-constants';
+ 
+ .wrapperSelect {
+     position: relative;
+    .errorMessage {
+        color: $errorColor;
+        position: absolute;
+        top:65px
+     }
+ }

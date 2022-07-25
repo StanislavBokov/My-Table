@@ -1,0 +1,11 @@
+const FETCH_TABLE_DATA = 'FETCH_TABLE_DATA' as const ;
+const ADD_TABLE_DATA = 'ADD_TABLE_DATA' as const ;
+const DELETE_TABLE_DATA = 'DELETE_TABLE_DATA' as const ;
+const EDIT_TABLE_DATA = 'EDIT_TABLE_DATA' as const ;
+
+export default {
+  FETCH_TABLE_DATA,
+  ADD_TABLE_DATA,
+  DELETE_TABLE_DATA,
+  EDIT_TABLE_DATA
+};

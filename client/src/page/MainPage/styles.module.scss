@@ -1,0 +1,16 @@
+@import '../../assets/styles/mixins';
+
+.wrapper {
+   margin-top: spacing(10);
+   @include flexbox(center, flex-start);
+
+   .wrapperFields {
+      @include flexbox(center, flex-start);
+
+   }
+}
+@include forDesktopBig {
+   .wrapper {
+      @include flexbox(center, center, column);
+   }
+}

@@ -1,0 +1,18 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/color-constants';
+
+.wrapperField {
+    margin: spacing(0, 4);
+   
+    .titles {
+        font-weight: 400;   
+    }
+
+    .addBtn {
+        background-color: transparent;
+        padding: spacing(2,8);
+        border-radius: spacing(1);
+        font-size: 18px;
+
+    }
+}

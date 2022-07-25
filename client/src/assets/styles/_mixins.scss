@@ -1,0 +1,36 @@
+$defaultFlexBoxAlign: center;
+$defaultFlexBoxJustify: center;
+$defaultFlexBoxDirection: row;
+
+@mixin flexbox($justify: $defaultFlexBoxJustify, $align: $defaultFlexBoxAlign, $flexDirection: $defaultFlexBoxDirection) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flexDirection;
+}
+
+$defaultSpacingUnit: 8;
+@function spacing($top, $right: null, $bottom: null, $left: null) {
+  @if $top != null and $right == null and $bottom == null and $left == null {
+    @return #{$top * $defaultSpacingUnit}#{'px'};
+  }
+
+  @if $top != null and $right != null and $bottom == null and $left == null {
+    @return #{$top * $defaultSpacingUnit}#{'px'} #{$right * $defaultSpacingUnit}#{'px'};
+  }
+
+  @if $top != null and $right != null and $bottom != null and $left == null {
+    @return #{$top * $defaultSpacingUnit}#{'px'} #{$right * $defaultSpacingUnit}#{'px'} #{$bottom * $defaultSpacingUnit}#{'px'};
+  }
+
+  @return #{$top * $defaultSpacingUnit}#{'px'} #{$right * $defaultSpacingUnit}#{'px'} #{$bottom * $defaultSpacingUnit}#{'px'}
+    #{$left * $defaultSpacingUnit}#{'px'};
+}
+
+@mixin forDesktopBig {
+  @media screen and (max-width: 1281px) {
+    @content;
+  }
+}
+
+

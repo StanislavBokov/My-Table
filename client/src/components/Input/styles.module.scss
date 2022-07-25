@@ -1,0 +1,61 @@
+
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/color-constants';
+
+.wrapperInput {
+    margin-bottom: spacing(5.75) ;
+    label {
+        position: relative;
+
+        .Input {
+            border: 2px solid $borderDefaultColor;
+            border-radius: spacing(1);
+            padding: spacing(2,3);
+            font-size: 18px;
+            outline: none;
+
+            &:hover {
+                border: 2px solid $hoverColor;
+            }
+        
+        }
+        .isValue {
+            transform: translateY(-28px);
+            background-color: white;
+        }
+        .span {
+            font-size: 18px;
+            position: absolute;
+            top:-2px;  
+            left:18px;
+            padding: spacing(0,1);
+        } 
+        .errorMessage {
+            color: $errorColor;
+            padding: spacing(1, 0);  
+            display: block;
+            position: absolute;
+        }  
+        .error {
+            color: $errorColor;
+        }
+        &:focus-within  {
+            color: $focusColor;
+
+            .span {
+                transition: transform 0.2s;
+                transform: translateY(-28px);
+                background-color: white;
+            }
+            .Input {
+                border-color: $borderDefaultColor;
+            }
+        }
+        .error {
+            border-color: $errorColor !important;
+        }
+    }
+    
+   
+
+}

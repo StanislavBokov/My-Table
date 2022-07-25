@@ -1,0 +1,16 @@
+@import '../../assets/styles/mixins';
+
+.Pagination {
+
+    margin: spacing(6, 0) !important;
+    @include flexbox(flex-start);
+
+    .item {
+        font-size: 18px;
+        margin-right: spacing(2);
+        color:  rgb(48, 41, 41)
+    }
+    .currentPage {
+        color: rgb(12, 12, 12)
+    }
+}

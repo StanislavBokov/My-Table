@@ -1,0 +1,19 @@
+@import '../../assets/styles/mixins';
+
+.wrapperFilterField {
+    .titles {
+        font-weight: 400;   
+    }
+
+    .wrapperSelects {
+        margin-bottom: spacing(5.75);
+    }
+    .btns {
+        background-color: transparent;
+        padding: spacing(2,8);
+        border-radius: spacing(1);
+        font-size: 18px;
+        min-width: 200px;
+        margin-bottom: spacing(2);
+    }
+}

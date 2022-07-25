@@ -1,0 +1,36 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/color-constants';
+
+.tbody {
+    .tr {
+        display: grid;
+        grid-template-columns: repeat(3, 160px) 280px 100px 0px;
+        padding: spacing(3,5);
+        margin: spacing(1, 0);
+        box-shadow: 0 0 2px 1px $mainColor ;
+        border-radius: spacing(0.5);
+        color: $mainColor;
+        
+       .btns {
+            border: none !important;
+            background-color: transparent !important;
+            font-size: 16px;
+            max-width:30px;
+        }
+        .deleteBtn {
+            transform: scale(1.5);            
+            font-weight: 200 !important;            
+        }
+    }
+    .editInput {
+        max-width: 100px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $mainColor;
+        font-size: 15px;
+    }
+    .editError {
+        border-bottom-color: $errorColor;
+        color: $errorColor
+    }
+}
